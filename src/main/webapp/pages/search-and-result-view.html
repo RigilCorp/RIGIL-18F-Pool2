@@ -1,0 +1,77 @@
+<div class="content" ng-class="{'text-center':isIntialScreen()}">
+	<div ng-class="{'aside':!isIntialScreen()}">
+		<div class="brand row no-gutters">
+			<div
+				ng-class="{'col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4':isIntialScreen(), 'col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1':!isIntialScreen()}">
+				<h1>Rigil F18 Pool2</h1>
+				<p class="landing-copy" ng-hide="!isIntialScreen()">Elementum
+					sit nunc tincidunt tristique facilisis, enim tempor! Velit! Et sed
+					dis, dictumst cum augue mus pid nec eu tempor proin cras
+					scelerisque mid, pellentesque urna rhoncus?</p>
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<form
+				ng-class="{'col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4':isIntialScreen(), 'col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1':!isIntialScreen()}">
+				<div class="input-group">
+					<input type="text" placeholder="Start searching"
+						class="form-control" id="searchBox"
+						ng-model="viewModel.searchKeyword"> <span
+						class="input-group-btn">
+						<button id="searchBttn" type="submit" class="btn btn-link">
+							<i class="fa fa-search"></i>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="results">
+		<div class="row">
+			<div class="col-sm-7 col-sm-offset-4 col-md-7 col-md-offset-4" ng-hide="isIntialScreen()">
+				<span ng-show="!isDataReloading"><label class="form-label"><strong>{{results.length}} </strong> Search results</label></span>
+				<span ng-show="isDataReloading"><i class="fa fa-refresh fa-spin fa-2x"></i></span>
+			</div>
+		</div>
+		<div class="row" ng-repeat="result in results">
+			<div class="col-sm-7 col-sm-offset-4 col-md-7 col-md-offset-4 panel"
+				ng-hide="isIntialScreen()">
+				<div class="row">
+					<div class="col-md-10 col-sm-10">
+						<h3 class="title">
+							<a href="" target="_blank">{{result.recallingFirm}}</a>
+						</h3>
+					</div>
+				</div>
+				<div class="row listing-main">
+					<div class="col-md-12 col-sm-12 padding-bottom">
+						<div class="listing-header">Product Description</div>
+						<blockquote class="listing-text">
+							<div class="content-snippet">{{result.productDescription}}</div>
+						</blockquote>
+					</div>
+					<div class="col-md-12 col-sm-12 padding-bottom">
+						<div class="listing-header">Reason For Recall</div>
+						<blockquote class="listing-text bottom-border">
+							<div class="content-snippet">{{result.reasonForRecall}}</div>
+						</blockquote>
+					</div>
+				</div>
+
+				<div class="row listing-bottom padding-bottom">
+					<div class="date col-md-12 col-sm-12 row">
+						<div class="date col-md-8 col-sm-8">
+							<span><i class="fa fa-calendar"></i> Reported:
+								{{result.reportDate | date:'MMM dd, yyyy'}}</span>
+						</div>
+						<div class="date col-md-4 col-sm-4">
+							<span><i class="fa fa-calendar"></i> Recall:
+								{{result.recallInitiationDate | date:'MMM dd, yyyy'}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

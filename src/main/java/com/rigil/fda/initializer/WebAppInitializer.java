@@ -34,9 +34,6 @@ public class WebAppInitializer implements WebApplicationInitializer{
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet(DISPATCHER_SERVLET, dispatcherServlet);
         dispatcher.addMapping("/");
         dispatcher.setLoadOnStartup(1);
-
-        FilterRegistration.Dynamic filter = servletContext.addFilter("openEntityManagerInViewFilter", OpenEntityManagerInViewFilter.class);
-        filter.addMappingForServletNames(null, true, "dispatcher");
     }
 
     private void registerContextListener(ServletContext servletContext) {

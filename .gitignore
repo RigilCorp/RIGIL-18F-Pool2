@@ -1,0 +1,13 @@
+/.classpath
+/.settings
+/.project
+/.springBeans
+/.tern-project
+/target
+/*.sh
+/**/.classpath
+/**/.settings
+/**/.project
+/**/target
+/**/*.sh
+/**/.tern-project
