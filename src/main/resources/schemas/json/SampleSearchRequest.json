@@ -1,0 +1,20 @@
+{
+    "enterpriseDocument": {
+        "documentTimeStamp": "",
+        "documentHeader": {
+            "documentServiceId": "",
+            "documentBusinessHeader": ""
+        },
+        "documentBody": {
+            "request": {
+                "requestMethod": "GET",
+                "requestCriteria": "",
+                "requestMessage": {
+                    "searchRequest": {
+                        "searchData": "x-ray"
+                      }
+                    }
+                }
+            }
+        }
+    }

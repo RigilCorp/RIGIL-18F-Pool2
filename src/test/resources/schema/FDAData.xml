@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<fda_data fda_data_id="1" fda_data_cd="DEVICE" fda_data_name="NEBULIZER" fda_data_desc="NEBULIZER"/>
+	<fda_data fda_data_id="2" fda_data_cd="FOOD" fda_data_name="SPINACH" fda_data_desc="SPINACH"/>
+	<fda_data fda_data_id="3" fda_data_cd="DRUG" fda_data_name="ADVIL" fda_data_desc="ADVIL"/>
+</dataset>

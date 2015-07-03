@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Enterprise Document Base Schema. NOTE: This schema can be extended to include any JSON compliant schemas within request and response elements that are part of the DocumentBody element.",
+  "type": "object",
+  "required": [
+    "EnterpriseDocument"
+  ],
+  "properties": {
+    "EnterpriseDocument": {
+      "type": "object",
+      "properties": {
+        "DocumentTimeStamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "DocumentHeader": {
+          "$ref": "#/definitions/documentHeaderDef"
+        },
+        "DocumentBody": {
+          "$ref": "#/definitions/documentBodyDef"
+        },
+        "DocumentBodyBinary": {
+          "$ref": "#/definitions/documentBodyBinaryDef"
+        },
+        "DocumentError": {
+          "$ref": "#/definitions/documentErrorDef"
+        }
+      }
+    }
+
+  },
+  "definitions": {
+    "requestDef": {
+      "description": "Request Data that can also refer to another JSON (schema) definition",
+      "type": "object",
+      "properties": {
+        "requestMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "responseDef": {
+      "description": "Response Data that can also refer to another JSON (schema) definition",
+      "type": "object",
+      "properties": {
+        "responseMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "documentHeaderDef": {
+      "type": "object",
+      "properties": {
+        "documentServiceId": {
+          "description": "Unique identifier for a specific exchange",
+          "type": "string"
+        },
+        "documentBusinessHeader": {
+          "description": "Application specific data",
+          "type": "string"
+        }
+      },
+      "required": [
+        "documentServiceId"
+      ]
+    },
+    "documentBodyDef": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/requestDef"
+      }
+    },
+
+
+    "documentBodyBinaryDef": {
+          "type": "object",
+           "properties": {
+                   "BinaryObject.Base64":  { "type": "string" },
+                   "BinaryTypeText": { "type": "string" },
+                   "BinaryMimeType": { "type": "string" }
+      },
+        "required": ["BinaryObject.Base64","BinaryTypeText", "BinaryMimeType"]
+    },
+
+
+    "documentErrorDef": {
+      "description": "Error",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "errormessage": {
+          "type": "string"
+        },
+        "originaldata": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "errormessage"
+      ]
+    }
+  }
+}
