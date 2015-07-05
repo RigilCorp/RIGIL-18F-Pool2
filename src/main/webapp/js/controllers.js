@@ -24,6 +24,11 @@ controllers.controller('searchAndResultController', ['$scope', '$log', 'SearchSe
    
     //Event Handlers Sections
     angular.element('#searchBttn').on('click', {viewModel : $scope.viewModel}, function(event){
+    	
+    	if(event.data.viewModel.searchKeyword.trim() === '') { 
+    		return false;
+    	}
+    	
     	$scope.isDataReloading = true;
     	$scope.$apply(function(){
             isSearchClicked = true;

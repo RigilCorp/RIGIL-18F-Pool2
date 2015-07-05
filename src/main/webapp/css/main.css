@@ -4,6 +4,11 @@ body {
 	font-size: 20px;
 }
 
+.container-fluid.view{
+	margin-top:50px;
+}
+
+
 .form-control {
 	height: 40px;
 }
@@ -78,30 +83,30 @@ span.input-group-btn {
 }
 
 .results {
-	padding-top: 125px;
+	padding-top: 180px;
 }
 
 @media ( min-width : 768px) {
 	.results {
-		padding-top: 85px;
+		padding-top: 140px;
 	}
 }
 
 @media only screen and (min-width:960px) {
 	.results {
-		padding-top: 85px;
+		padding-top: 140px;
 	}
 }
 
 @media only screen and (min-width:1440px) {
 	.results {
-		padding-top: 85px;
+		padding-top: 140px;
 	}
 }
 
 @media only screen and (min-width:2000px) {
 	.results {
-		padding-top: 85px;
+		padding-top: 140px;
 	}
 }
 
