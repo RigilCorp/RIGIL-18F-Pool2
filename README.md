@@ -1,8 +1,5 @@
-# Prototype Web Link
+# Prototype Link
 - [FDSeek Home]
-or 
-[FDSeek IP Link]
-
 # Approach for the 18f Challenge
 There are numerous Agile-aligned frameworks: Scrum, Kanban, Feature-Driven Development etc. We examined the parameters of this challenge-1 week delivery, needing to demonstrate process in action, ability to discover and adapt on an hourly / daily basis and the tenets of the Digital Services Playbook. We believe that Scrum's ceremonies and focus on heads down, work the committed/forecasted plan for the iteration were less applicable to the 18f challenge. Therefore, we determined that Kanban in combination with XP practices were the most appropriate frameworks to get the project needs delivered because we could: 
  - Visually see work in progress (WIP)
@@ -55,16 +52,17 @@ We completed the timebox associated with the 18f challenge with all MVP targeted
 # Website
 - [FDSeek Home]
 - [Git Repo] 
+- [Docker Hub]
 
 # Evidence
 U.S. Digital Services Playbook principles were used extensively in our approach and the evidences to the approach are documented in here
 - [Evidence for Section E]
 
-[fdseek]:http://www.fdseek.com:8080/rigil-18f-pool2/#/
-[FDSeek Home]:http://www.fdseek.com:8080/rigil-18f-pool2/#/
+[fdseek]:http://fdseek.com
+[FDSeek Home]:(http://fdseek.com)
 [Git Repo]:https://github.com/RigilCorp/RIGIL-18F-Pool2
 [Evidence for Section E]:https://github.com/RigilCorp/RIGIL-18F-Pool2/tree/master/documents/evidence
-[FDSeek IP Link]:http://52.5.29.80:8080/rigil-18f-pool2/
+[Docker Hub]:https://registry.hub.docker.com/u/agiletrailblazers/pool2-18f/
 
 
 
